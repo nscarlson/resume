@@ -2,8 +2,8 @@
 
 This directory contains a sample resume edited with ReLaXed.
 
-> Master document: [``resume.pug``](https://github.com/RelaxedJS/ReLaXed-examples/blob/master/examples/resume/resume.pug). <br/>
-Stylesheet: [``resume.scss``](https://github.com/RelaxedJS/ReLaXed-examples/blob/master/examples/resume/resume.scss).
+> Master document template: [``resume.pug``](./resume.pug). <br />
+> Stylesheet: [``resume.scss``](./resume.scss).
 
 <p align=center><img src="./resume_screenshot.png"/></p>
 
