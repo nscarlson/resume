@@ -1,6 +1,6 @@
 # PDF Resume with Relaxed.JS (mnjul's design)
 
-This directory contains a sample resume edited with ReLaXed.
+This is my personal résumé edited with ReLaXed.
 
 > Master document template: [``resume.pug``](./resume.pug). <br />
 > Stylesheet: [``resume.scss``](./resume.scss).
