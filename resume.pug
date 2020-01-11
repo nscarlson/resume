@@ -1,0 +1,82 @@
+include resume-mixins.pug
+
+#main
+  #title
+    h1 Nathan Carlson
+    .subtitle Software Engineer
+
+  .main-block
+    h2 #[i.fa.fa-suitcase] Experience
+    +item("Senior Software Engineer", "Motili", "Denver", "12/2019", "03/2019")
+      :markdown-it
+        Motili's core offering empowers HVAC contractors and property owners by enabling them to interface together seamlessly on a platform that generates work orders and quotes, sources parts, fulfills orders, and manages assets.
+
+        - Implemented back end, and user facing, features in a production environment
+        - Delivered a centralized solution for automatic code formatting and linting across multiple code repositories
+        - Wrote a tool allowing interaction with product catalog data using CRUD actions, as an alternative to writing tedious SQL scripts
+        - Advocated for coworker success by providing a listening ear and teaching on new technologies and frameworks
+        - Prototyped experimental applications in order to evaluate alternative frameworks
+
+        **Technologies Used**
+        - IBM LoopBack, GraphQL, Node.js, React.js
+        - Postgres, AWS, Redis, BullMQ, Jenkins
+        
+    +item("Software Engineer", "ShapeShift", "Denver", "01/2019", "12/2018")
+      :markdown-it
+        - Contributed to the CoinCap redesign effort - [https://coincap.io](coincap.io)
+        - Contributed to the Membership Portal - [https://portal.shapeshift.io](portal.shapeshift.io)
+        - Implemented public and authenticated GraphQL queries returning data from multiple sources, including REST, Redis, and Postgres
+        - Gathered and implemented requirements for db schema design and Sequelize migrations
+        - Spearheaded efforts for migrating to frameworks such as Formik and TypeORM, with working prototypes
+        - Designed and delivered a cron-like microservice that performs network and database queries on specific time intervals
+        - Enjoyed training new members of the team, familiarizing them with the tech stack
+        - Implemented a cold storage service layer which includes deriving addresses from xpubs on multiple chains and an m-of-n bitcoin multisig arrangement
+
+    +item("Software engineer", "Braxton Technologies", "Colorado Springs", "12/2018", "04/2014")
+      :markdown-it
+        - Contributed to the SENSOR program contracted to Harris Corporation
+        - Used Puppet to provision Splunk centralized logging in complex networked environments
+        - Implemented automatic enforcement for many Security Technical Implementation Guides (STIGs) for RHEL7 VMs using Puppet, shell scripting, and other tools
+        - Simplified multi-host installation scripts running over a network
+        - Implemented features in Spring Boot REST with unit test coverage
+
+        **Technologies Used**
+        - VMware, Red Hat Enterprise Linux, Puppet, Splunk, Digital Unix
+        - Java, Spring MVC, JPA, various Java libraries
+
+
+  .main-block.concise
+    h2 #[i.fa.fa-graduation-cap] Education
+    +item("University of Colorado Colorado Springs", "", "Colorado Springs")
+      .concise
+        :markdown-it
+          - Bachelor of Science in Computer Science
+          - Minor in Mathematics
+      
+#sidebar
+  #contact.side-block
+    h1 Contact Info
+    ul
+      li #[i.fa.fa-mobile] 719.244.4351
+      li #[i.fab.fa-linkedin-in] nathanscarlson
+      li #[i.fa.fa-envelope] nthn@crlsn.io
+      li #[i.fab.fa-twitter] @mrnathancarlson
+      
+  #contact.side-block
+    h1 Skills
+    ul
+      li #[i.fab.fa-node-js] Node.js
+      li #[i.fas.fa-project-diagram] GraphQL
+      li #[i.fab.fa-react] React.js
+      li #[i.fab.fa-git-alt] Git
+      li #[i.fab.fa-docker] Docker
+      li #[i.fa.fa-dharmachakra] Kubernetes
+      li #[i.fa.fa-database] Postgres
+      li #[i.fa.fa-database] Redis
+      li #[i.fa.fa-terminal] Bash
+
+  #disclaimer.side-block.
+      This résumé was typeset with HTML/CSS — git.io/vVSYL
+
+style
+  include resume.scss
