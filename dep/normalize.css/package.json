@@ -9,7 +9,7 @@
     "normalize.css"
   ],
   "devDependencies": {
-    "stylelint": "^7.9.0",
+    "stylelint": "13.13.1",
     "stylelint-config-standard": "^16.0.0"
   },
   "scripts": {
