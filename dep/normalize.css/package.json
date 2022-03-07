@@ -10,7 +10,7 @@
   ],
   "devDependencies": {
     "stylelint": "^7.9.0",
-    "stylelint-config-standard": "^16.0.0"
+    "stylelint-config-standard": "25.0.0"
   },
   "scripts": {
     "test": "stylelint normalize.css"
