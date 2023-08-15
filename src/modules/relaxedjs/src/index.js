@@ -44,7 +44,8 @@ const inputPath = path.resolve(input)
 const inputDir = path.resolve(inputPath, '..')
 const inputFilenameNoExt = path.basename(input, path.extname(input))
 
-var configPath
+let configPath
+
 for (var filename of ['config.yml', 'config.json']) {
   let possiblePath = path.join(inputDir, filename)
   if (fs.existsSync(possiblePath)) {
@@ -57,9 +58,11 @@ for (var filename of ['config.yml', 'config.json']) {
 if (!output) {
   output = path.join(inputDir, inputFilenameNoExt + '.pdf')
 }
+
 const outputPath = path.resolve(output)
 
 var tempDir
+
 if (options.temp) {
   var validTempPath = fs.existsSync(options.temp) && fs.statSync(options.temp).isDirectory()
 
