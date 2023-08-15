@@ -7,7 +7,18 @@ include resume-mixins.pug
 
   .main-block
     h2 #[i.fa.fa-suitcase] Experience
-    +item("Senior Software Engineer", "Motili", "Denver", "12/2019", "03/2019")
+
+    +item("VP of Engineering", "CaucusRoom", "Golden, CO", "02/2020", "present")
+      :markdown-it
+        Lorem Ipsum
+
+        - Managed a team of six engineers
+
+        **Technologies Used**
+        - React.js, Node.js, GraphQL, RSMQ, 
+        - VMWare, Ubuntu, Docker, MongoDB, Postgres, Redis
+
+    +item("Senior Software Engineer", "Motili", "Denver, CO", "12/2019", "03/2019")
       :markdown-it
         Motili's core offering empowers HVAC contractors and property owners by enabling them to interface together seamlessly on a platform that generates work orders and quotes, sources parts, fulfills orders, and manages assets.
 
@@ -21,7 +32,7 @@ include resume-mixins.pug
         - IBM LoopBack, GraphQL, Node.js, React.js
         - Postgres, AWS, Redis, BullMQ, Jenkins
         
-    +item("Software Engineer", "ShapeShift", "Denver", "01/2019", "12/2018")
+    +item("Software Engineer", "ShapeShift", "Denver, CO", "01/2019", "12/2018")
       :markdown-it
         - Contributed to the CoinCap redesign effort - [https://coincap.io](coincap.io)
         - Contributed to the Membership Portal - [https://portal.shapeshift.io](portal.shapeshift.io)
@@ -32,7 +43,7 @@ include resume-mixins.pug
         - Enjoyed training new members of the team, familiarizing them with the tech stack
         - Implemented a cold storage service layer which includes deriving addresses from xpubs on multiple chains and an m-of-n bitcoin multisig arrangement
 
-    +item("Software engineer", "Braxton Technologies", "Colorado Springs", "12/2018", "04/2014")
+    +item("Software engineer", "Braxton Technologies", "Colorado Springs, CO", "12/2018", "04/2014")
       :markdown-it
         - Contributed to the SENSOR program contracted to Harris Corporation
         - Used Puppet to provision Splunk centralized logging in complex networked environments
@@ -47,7 +58,7 @@ include resume-mixins.pug
 
   .main-block.concise
     h2 #[i.fa.fa-graduation-cap] Education
-    +item("University of Colorado Colorado Springs", "", "Colorado Springs")
+    +item("University of Colorado Colorado Springs", "", "")
       .concise
         :markdown-it
           - Bachelor of Science in Computer Science

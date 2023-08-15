@@ -1,0 +1,46 @@
+{
+  "name": "relaxedjs",
+  "version": "0.2.5",
+  "description": "Create PDF documents using web technologies (PDF/SCSS)",
+  "main": "src/masterToPDF.js",
+  "bin": {
+    "relaxed": "src/index.js",
+    "pretty-pdf-thumbnail": "src/cli-tools/pretty-pdf-thumbnail.js",
+    "pdf2gif": "src/cli-tools/pdf2gif.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Zulko",
+  "homepage": "https://github.com/RelaxedJS",
+  "license": "ISC",
+  "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^4.0.1",
+    "cheerio": "^1.0.0-rc.2",
+    "chokidar": "^3.5.3",
+    "colors": "^1.3.0",
+    "commander": "^9.1.0",
+    "csvtojson": "^2.0.3",
+    "deptree": "^1.0.0",
+    "filesize": "^8.0.7",
+    "html2jade": "^0.8.6",
+    "jimp": "^0.16.1",
+    "js-yaml": "^4.1.0",
+    "jstransformer-highlight": "^2.0.0",
+    "jstransformer-markdown-it": "^2.1.0",
+    "katex": "^0.15.3",
+    "markdown-it": "^12.3.0",
+    "markdown-it-footnote": "^3.0.3",
+    "mathjax-node-page": "^3.0.1",
+    "mermaid": "^8.0.0-rc.8",
+    "pug": "^3.0.2",
+    "puppeteer": "^13.5.1",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "diff": "^5.0.0",
+    "mocha": "^9.2.2",
+    "pdf-image": "^2.0.0",
+    "pixel-diff": "^1.0.1"
+  }
+}
