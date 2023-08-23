@@ -1,7 +1,7 @@
 {
   "scripts": {
     "render": "./src/modules/relaxedjs/src/index.js resume.pug --build-once",
-    "render:watch": "yarn relaxed resume.pug"
+    "render:watch": "open resume.pdf && ./src/modules/relaxedjs/src/index.js resume.pug"
   },
   "dependencies": {
     "relaxedjs": "0.2.5"

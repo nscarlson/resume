@@ -1,6 +1,6 @@
 @page {
     size: letter portrait;
-    margin: 0;
+    margin: 15mm 10mm 15mm 10mm;
   }
   
   * {
@@ -45,22 +45,22 @@
     color: #000;
   }
   
-  li{
+  li {
     list-style-type: none;
   }
   
-  #main{
+  #main {
     float: left;
     width: var(--main-width);
     padding: 0.25in 0.25in 0 0.25in;
     font-size: 8pt;
   }
   
-  #sidebar{
+  #sidebar {
     float: right;
     position: relative; /* for disclaimer */
     width: var(--sidebar-width);
-    height: 100%;
+    height: calc(100% - 5mm);
     padding: 0.6in var(--sidebar-horizontal-padding);
     background-color: #f2f2f2;
     font-size: 8.5pt;
@@ -73,14 +73,14 @@
     text-transform: uppercase;
   }
   
-  #title{
+  #title {
     position: relative;
     left: 0.55in;
     margin-bottom: 0.3in;
     line-height: 1.2;
   }
   
-  #title h1{
+  #title h1 {
     font-weight: 300;
     font-size: 18pt;
     line-height: 1.5;
@@ -93,6 +93,11 @@
   
   .subtitle{
     font-size: 8pt;
+  }
+
+  #summary {
+    position: relative;
+    left: 0.55in;
   }
   
   /*** categorial blocks ***/
@@ -121,7 +126,7 @@
     color: #444;
   }
   
-  #main h2::after{ /* extends the decorator line */
+  #main h2::after { /* extends the decorator line */
     height: calc(var(--row-blocks-padding-top) * 2);
     position: relative;
     top: calc(-1 * var(--row-blocks-padding-top));
@@ -151,7 +156,6 @@
 
   #main strong {
     font-weight: bold;
-    font
   }
   
   /**** individual row blocks (date - decorator - details) ****/
@@ -234,40 +238,40 @@
   
   /***** fine-tunes on the details block where the real juice is *****/
   
-  .details{
+  .details {
     flex: 1 0 0;
     padding-left: var(--decorator-horizontal-margin);
     padding-top: calc(var(--row-blocks-padding-top) - 0.5pt) !important; /* not sure why but this is needed for better alignment */
   }
   
-  .details header{
+  .details header {
     color: #000;
   }
   
-  .details h3{
+  .details h3 {
     font-size: 9pt;
   }
   
-  .main-block:not(.concise) .details div{
+  .main-block:not(.concise) .details div {
     margin: 0.18in 0 0.1in 0; 
   }
   
-  .main-block:not(.concise) .blocks:last-child .details div{
+  .main-block:not(.concise) .blocks:last-child .details div {
     margin-bottom: 0;
   }
   
-  .main-block.concise .details div:not(.concise){
+  .main-block.concise .details div:not(.concise) {
     /* use padding to work around the fact that margin doesn't affect floated
        neighboring elements */
     padding: 0.05in 0 0.07in 0;
   }
   
-  .details .place{
+  .details .place {
     float: left;
     font-size: 7.5pt;
   }
   
-  .details .location{
+  .details .location {
     float: right;
   }
   
@@ -275,7 +279,7 @@
     clear: both;
   }
   
-  .details .location::before{
+  .details .location::before {
     display: inline-block;
     position: relative;
     right: 3pt;
@@ -299,58 +303,67 @@
   }
   
   /****** customize list symbol style ******/
-  #main li::before{
+  .main-block li::before {
     position: relative;
     margin-left: -4.25pt;
     content: '• ';
   }
   
-  .details .concise ul{
+  .details .concise ul {
     margin: 0 !important;
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
   }
   
-  .details .concise li{
+  .details .concise li {
     margin: 0 !important;
   }
   
-  .details .concise li{
+  .details .concise li {
     margin-left: 0 !important;
   }
   
-  
-  
   /* sidebar */
   
-  #sidebar h1{
+  #sidebar h1 {
     font-weight: 400;
     font-size: 11pt;
   }
   
-  .side-block{
+  .side-block {
     margin-top: 0.5in; 
   }
   
-  #contact ul{
+  #contact ul {
     margin-top: 0.05in;
     padding-left: 0;
     font-family: "Source Code Pro";
     font-weight: 400;
     line-height: 1.75;
   }
-  
-  #contact li > i{
-    width: 9pt; /* for text alignment */
-    text-align: right;
+
+  #main #contact ul {
+    position: relative;
+    /* XXX: 0.5px for aligning fx printing */
+    left: 0.55in;
+  }
+
+  #contact ul.horizontal li {
+    display: inline-block;
+    margin-right: 10pt;
   }
   
-  #skills{
+  #contact li > i {
+    width: 9pt; /* for text alignment */
+    text-align: left;
+  }
+  
+  #skills {
     line-height: 1.5;
   }
   
-  #skills ul{
+  #skills ul {
     margin-top: 0.05in;
     padding-left: 0;
     font-family: "Source Code Pro";
@@ -358,7 +371,7 @@
     line-height: 1.75;
   }
   
-  #disclaimer{
+  #disclaimer {
     position: absolute;
     bottom: var(--sidebar-horizontal-padding);
     right: var(--sidebar-horizontal-padding);
@@ -369,7 +382,7 @@
     color: #777;
   }
   
-  #disclaimer code{
+  #disclaimer code {
     color: #666;
     font-family: "Source Code Pro";
     font-weight: 400;

@@ -1,22 +1,33 @@
 include resume-mixins.pug
 
 #main
+  #contact
+    ul.horizontal
+      li #[i.fa.fa-mobile] 719.244.4351
+      li #[i.fa.fa-envelope] nathan.s.carlson@protonmail.com
+
   #title
     h1 Nathan Carlson
-    .subtitle Software Engineer
-
+    //- .subtitle Software Engineer
+  
+  #summary
+    h2 Summary
+    
+    :markdown-it
+      lorem ipsum dolor sit amet
+    
   .main-block
     h2 #[i.fa.fa-suitcase] Experience
 
-    +item("VP of Engineering", "CaucusRoom", "Golden, CO", "02/2020", "present")
+    +item("VP of Engineering", "Ouray Digital", "Golden, CO", "02/2020", "present")
       :markdown-it
-        Lorem Ipsum
+        Spearheaded the technical direction, scale, and architecture of a social media platform.
 
-        - Managed a team of six engineers
+        - Remained hands on technically while leading a team of six software engineers
 
         **Technologies Used**
-        - React.js, Node.js, GraphQL, RSMQ, 
-        - VMWare, Ubuntu, Docker, MongoDB, Postgres, Redis
+        - React, Node.js, GraphQL, Meteor.js
+        - MongoDB, Postgres, nginx, Redis, Docker Swarm, VMWare, Ubuntu Server
 
     +item("Senior Software Engineer", "Motili", "Denver, CO", "12/2019", "03/2019")
       :markdown-it
@@ -66,12 +77,10 @@ include resume-mixins.pug
       
 #sidebar
   #contact.side-block
-    h1 Contact Info
+    h1 Find Me
     ul
-      li #[i.fa.fa-mobile] 719.244.4351
+      li #[i.fab.fa-github] nscarlson
       li #[i.fab.fa-linkedin-in] nathanscarlson
-      li #[i.fa.fa-envelope] nthn@crlsn.io
-      li #[i.fab.fa-twitter] @mrnathancarlson
       
   #contact.side-block
     h1 Skills
@@ -85,9 +94,6 @@ include resume-mixins.pug
       li #[i.fa.fa-database] Postgres
       li #[i.fa.fa-database] Redis
       li #[i.fa.fa-terminal] Bash
-
-  #disclaimer.side-block.
-      This résumé was typeset with HTML/CSS — git.io/vVSYL
 
 style
   include resume.scss
