@@ -7,7 +7,7 @@
     box-sizing: border-box;
   }
   
-  :root{
+  :root {
     --page-width: 8.5in;
     --page-height: 11in;
     --main-width: 6.4in;
@@ -29,7 +29,7 @@
     --main-blocks-title-icon-offset-left: -19pt;
   }
   
-  body{
+  body {
     width: var(--page-width);
     height: var(--page-height);
     margin: 0;
@@ -40,7 +40,7 @@
     hyphens: auto;
   }
   
-  h1, h2, h3{
+  h1, h2, h3 {
     margin: 0;
     color: #000;
   }
@@ -69,7 +69,7 @@
   /* main */
   
   /** big title **/
-  #title, h1, h2{
+  #title, h1, h2 {
     text-transform: uppercase;
   }
   
@@ -86,7 +86,7 @@
     line-height: 1.5;
   }
   
-  #title h1 strong{
+  #title h1 strong {
     margin: auto 2pt auto 4pt;
     font-weight: 600;
   }
@@ -96,8 +96,13 @@
   }
 
   #summary {
+    left: calc(0.55in)
+  }
+
+  #summary p {
     position: relative;
-    left: 0.55in;
+    left: calc(var(--date-block-width));
+    padding-left: var(--decorator-horizontal-margin);
   }
   
   /*** categorial blocks ***/
@@ -116,7 +121,7 @@
     color: #555;
   }
   
-  #main h2 > i{
+  #main h2 > i {
     /* use absolute position to prevent icon's width from misaligning title */
     /* assigning a fixed width here is no better due to needing to align decorator
        line too */
@@ -126,7 +131,7 @@
     color: #444;
   }
   
-  #main h2::after { /* extends the decorator line */
+  #main > .main-block > h2::after { /* extends the decorator line */
     height: calc(var(--row-blocks-padding-top) * 2);
     position: relative;
     top: calc(-1 * var(--row-blocks-padding-top));
@@ -141,16 +146,20 @@
   }
   
   /**** minor tweaks on the icon fonts ****/
-  #main h2 > .fa-graduation-cap{
+  #summary h2 > .fa-list {
+    top: 2pt;
+  }
+
+  #main h2 > .fa-graduation-cap {
     left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
     top: 2pt;
   }
   
-  #main h2 > .fa-suitcase{
-    top: 1pt;
+  #main h2 > .fa-suitcase {
+    top: 2pt;
   }
   
-  #main h2 > .fa-folder-open{
+  #main h2 > .fa-folder-open {
     top: 1.5pt;
   }
 
@@ -160,16 +169,16 @@
   
   /**** individual row blocks (date - decorator - details) ****/
   
-  .blocks{
+  .blocks {
     display: flex;
     flex-flow: row nowrap;
   }
   
-  .blocks > div{
+  .blocks > div {
     padding-top: var(--row-blocks-padding-top);
   }
   
-  .date{
+  .date {
     flex: 0 0 var(--date-block-width);
     padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
     padding-right: var(--decorator-horizontal-margin);
@@ -178,11 +187,11 @@
     line-height: 1;
   }
   
-  .date span{
+  .date span {
     display: block;
   }
   
-  .date span:nth-child(2)::before{
+  .date span:nth-child(2)::before {
     position: relative;
     top: 1pt;
     right: 5.5pt;
@@ -191,7 +200,7 @@
     content: '|';
   }
   
-  .decorator{
+  .decorator {
     flex: 0 0 0;
     position: relative;
     width: 2pt;
@@ -208,7 +217,7 @@
    *
    */
   
-  .decorator::before{
+  .decorator::before {
     position: absolute;
     top: var(--decorator-outer-offset-top);
     left: var(--decorator-outer-offset-left);
@@ -220,7 +229,7 @@
     background-color: #fff;
   }
   
-  .decorator::after{
+  .decorator::after {
     position: absolute;
     top: calc(var(--decorator-outer-offset-top) + var(--decorator-border-width));
     left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width));
@@ -232,7 +241,7 @@
     background-color: #555;
   }
   
-  .blocks:last-child .decorator{ /* slightly shortens it */
+  .blocks:last-child .decorator { /* slightly shortens it */
     margin-bottom: 0.25in;
   }
   
@@ -275,7 +284,7 @@
     float: right;
   }
   
-  .details div{
+  .details div {
     clear: both;
   }
   
@@ -355,7 +364,6 @@
   }
   
   #contact li > i {
-    width: 9pt; /* for text alignment */
     text-align: left;
   }
   

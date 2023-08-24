@@ -5,13 +5,14 @@ include resume-mixins.pug
     ul.horizontal
       li #[i.fa.fa-mobile] 719.244.4351
       li #[i.fa.fa-envelope] nathan.s.carlson@protonmail.com
+      li #[i.fas.fa-location-dot] Black Hawk, Colorado
 
   #title
     h1 Nathan Carlson
     //- .subtitle Software Engineer
   
   #summary
-    h2 Summary
+    h2 #[i.fas.fa-list] Summary
     
     :markdown-it
       lorem ipsum dolor sit amet
@@ -64,12 +65,39 @@ include resume-mixins.pug
 
         **Technologies Used**
         - VMware, Red Hat Enterprise Linux, Puppet, Splunk, Digital Unix
-        - Java, Spring MVC, JPA, various Java libraries
+        - Java, Spring MVC, JPA
+    
+    #projects
+      h2 #[i.fas.fa-code] Personal Projects
+      //- +item("Homelab", "", "")
 
+      .blocks
+        .details
+          header
+            h3 Homelab
+          .description
+            :markdown-it
+              This is my main outlet to satisfy my curiosity for experimentation I host compute resources for a few data science projects
+
+          header
+            h3 Homelab
+          .description
+            :markdown-it
+              This is my main outlet to satisfy my curiosity for experimentation I host compute resources for a few data science projects
+
+      +item("Internet of Things")
+        :markdown-it
+          Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+          Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+
+          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
   .main-block.concise
     h2 #[i.fa.fa-graduation-cap] Education
-    +item("University of Colorado Colorado Springs", "", "")
+    +item("University of Colorado Colorado Springs", "", "", "2014")
       .concise
         :markdown-it
           - Bachelor of Science in Computer Science
