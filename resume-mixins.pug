@@ -15,3 +15,16 @@ mixin item(title, place, location, from_date, to_date)
           span.location= location
       .description
         block
+
+mixin projectitem(title)
+  .blocks
+    .date
+    .details
+      header
+        h3= title
+        if place
+          span.place= place
+        if location
+          span.location= location
+      .description
+        block

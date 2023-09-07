@@ -150,6 +150,21 @@
     top: 2pt;
   }
 
+  /* #projects h3, #projects p {
+    position: relative;
+    left: calc(var(--date-block-width));
+    padding-left: var(--decorator-horizontal-margin);
+  }
+
+  #projects div.description, #projects p {
+    margin: 0px;
+    padding-top: 0px;
+  }
+
+  #projects p {
+    padding-bottom: 5pt;
+  } */
+
   #main h2 > .fa-graduation-cap {
     left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
     top: 2pt;
