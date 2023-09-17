@@ -13,29 +13,52 @@ include resume-mixins.pug
   
   #summary
     h2 #[i.fas.fa-list] Summary
-    
-    :markdown-it
-      lorem ipsum dolor sit amet
-    
+
+  .blocks
+    .date
+      if from_date
+        span= from_date
+      if to_date
+        span= to_date
+    .details
+      header
+        h3= title
+        if place
+          span.place= place
+        if location
+          span.location= location
+      .description
+        :markdown-it
+          Vice President of Engineering with experience overseeing a startup engineering team and architecting full-stack applications and systems.
+          Managed and mentored a team of six engineers, fostering innovation and best practices. Demonstrated ability in aligning technology
+          strategies with business goals and driving team excellence.
+          
+          Striving to model a transformational leadership style through mentorship, inspiration, recognition, and individual concern for personal growth.
+
+          Seeking opportunities to leverage engineering and leadership skills in a forward-thinking environment.
   .main-block
     h2 #[i.fa.fa-suitcase] Experience
 
-    +item("VP of Engineering", "Ouray Digital", "Golden, CO", "02/2020", "present")
+    +item("VP of Engineering", "Ouray Digital", "Golden, CO", "Present", "02/2020")
       :markdown-it
-        Spearheaded the technical direction, scale, and architecture of a social media platform.
-
-        - Remained hands on technically while leading a team of six software engineers
-        - Scaled a social media site from 500 to over 150,000 users
-        - Designed and implemented a live voting system
-        - Integrated a web conference solution in concert with video streaming and recording cloud solutions
+        Spearheaded the technical direction and architecture of a social media platform, scaling from 500 to over 150,000 users
+        - Recruited and mentored new team members
+        - In an environment with only manual and time-consuming software releases, implemented CI/CD pipelines using CircleCI,
+          reducing development lead time, and greatly improving quality assurance
+        - Designed a notifications system powered by RSMQ and GraphQL subscriptions
+        - As business needs required consolidated control that public cloud hosting solutions could not provide, transformed and migrated the platform's infrastructure, achieving full vertical control of hosting and realizing significant performance benefits.
+        - Designed a live voting tool used during virtual events on the platform
+        - Built web conference solutions, integrating with video stream broadcasting and cloud recording solutions
 
         **Technologies Used**
-        - React, Node.js, GraphQL, Meteor.js
-        - CircleCI, MongoDB, Postgres, nginx, Redis, Docker Swarm, VMWare, Ubuntu Server
+        - React, Node.js, GraphQL, TypeScript, Meteor.js, RSMQ
+        - CircleCI, MongoDB, Postgres, nginx, Redis, Mailgun, Campaign Monitor, Cloudflare
+        - AWS, Ubuntu Server, VMWare, Docker Swarm, Ansible
 
     +item("Senior Software Engineer", "Motili", "Denver, CO", "12/2019", "03/2019")
       :markdown-it
-        Motili's core offering empowers HVAC contractors and property owners by enabling them to interface together seamlessly on a platform that generates work orders and quotes, sources parts, fulfills orders, and manages assets.
+        Motili's core offering empowers HVAC contractors and property owners by enabling them to interface together seamlessly on
+        a platform that generates work orders and quotes, sources parts, fulfills orders, and manages assets.
 
         - Implemented back end, and user facing, features in a production environment
         - Delivered a centralized solution for automatic code formatting and linting across multiple code repositories
@@ -47,18 +70,19 @@ include resume-mixins.pug
         - IBM LoopBack, GraphQL, Node.js, React.js
         - Postgres, AWS, Redis, BullMQ, Jenkins
         
-    +item("Software Engineer", "ShapeShift", "Denver, CO", "01/2019", "12/2018")
+    +item("Software Engineer", "ShapeShift", "Denver, CO", "01/2019", "12/2017")
       :markdown-it
         - Contributed to the CoinCap redesign effort - [https://coincap.io](coincap.io)
         - Contributed to the Membership Portal - [https://portal.shapeshift.io](portal.shapeshift.io)
         - Implemented public and authenticated GraphQL queries returning data from multiple sources, including REST, Redis, and Postgres
         - Gathered and implemented requirements for db schema design and Sequelize migrations
-        - Spearheaded efforts for migrating to frameworks such as Formik and TypeORM, with working prototypes
-        - Designed and delivered a cron-like microservice that performs network and database queries on specific time intervals
+        - Spearheaded efforts to unify form management to Formik, and consolidate data APIs with TypeORM
+        - Designed and delivered cron-like microservices that performing periodic queries and tasks
         - Enjoyed training new members of the team, familiarizing them with the tech stack
-        - Implemented a cold storage service layer which includes deriving addresses from xpubs on multiple chains and an m-of-n bitcoin multisig arrangement
+        - Implemented a cold storage service layer which includes deriving addresses from xpubs on 
+          multiple chains and m-of-n bitcoin multisig arrangements
 
-    +item("Software engineer", "Braxton Technologies", "Colorado Springs, CO", "12/2018", "04/2014")
+    +item("Software Engineer", "Braxton Technologies", "Colorado Springs, CO", "12/2017", "04/2014")
       :markdown-it
         - Contributed to the SENSOR program contracted to Harris Corporation
         - Used Puppet to provision Splunk centralized logging in complex networked environments
@@ -75,12 +99,9 @@ include resume-mixins.pug
       //- +item("Homelab", "", "")
 
       +projectitem("Homelab")
-          :markdown-it
-            Virtualized infrastructure for data science consulting, providing MLOps tooling such as Dask and Jupyter Lab
-
-      +projectitem("Internet of Things")
         :markdown-it
-          This is my main outlet to satisfy my curiosity for experimentation I host compute resources for data science projects
+          Proxmox-based virtualization tailored for data science workflows.  Key Applications are Dask for scalable
+          computing and advanced parallelism, and Jupyter Lab for for interactive data science and analysis.
 
   .main-block.concise
     h2 #[i.fa.fa-graduation-cap] Education
@@ -102,13 +123,16 @@ include resume-mixins.pug
     ul
       li #[i.fab.fa-node-js] Node.js
       li #[i.fas.fa-project-diagram] GraphQL
-      li #[i.fab.fa-react] React.js
+      li #[i.fab.fa-react] ReactJS
       li #[i.fab.fa-git-alt] Git
       li #[i.fab.fa-docker] Docker
+      li #[i.fas.fa-gears] Ansible
       li #[i.fa.fa-dharmachakra] Kubernetes
       li #[i.fa.fa-database] Postgres
       li #[i.fa.fa-database] Redis
       li #[i.fa.fa-terminal] Bash
-
+      li #[i.fas.fa-server] VMWare
+      li #[i.fas.fa-server] Proxmox
+      
 style
   include resume.scss

@@ -98,12 +98,6 @@
   #summary {
     left: calc(0.55in)
   }
-
-  #summary p {
-    position: relative;
-    left: calc(var(--date-block-width));
-    padding-left: var(--decorator-horizontal-margin);
-  }
   
   /*** categorial blocks ***/
   
