@@ -38,7 +38,7 @@
     "sass": "^1.49.9"
   },
   "devDependencies": {
-    "diff": "^5.0.0",
+    "diff": "^7.0.0",
     "mocha": "^9.2.2",
     "pdf-image": "^2.0.0",
     "pixel-diff": "^1.0.1"
