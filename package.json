@@ -4,6 +4,6 @@
     "render:watch": "open resume.pdf && ./src/modules/relaxedjs/src/index.js resume.pug"
   },
   "dependencies": {
-    "relaxedjs": "0.2.5"
+    "relaxedjs": "0.2.6"
   }
 }
